@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link href="main.css" rel="stylesheet" type="text/css">   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UDRHA</title>  
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="top-bar">
+            SUSCRIBITE A NUESTRO BOLETIN Y ENCONTRA DESCUENTOS EXCLUSIVOS
+        </div>
+        <div class="container">
+            <nav class="nav-container">
+                <div class="logo">
+                    <img src="assets pagina udrha/udrha header home.svg" alt="">
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#remeras">REMERAS</a></li>
+                    <li><a href="#camperas">CAMPERAS</a></li>
+                    <li><a href="#pantalones">PANTALONES</a></li>
+                    <li><a href="#accesorios">ACCESORIOS</a></li>
+                </ul>
+                <div class="header-icons">
+                    <input type="text" class="search-box" placeholder="Buscar">
+                    <div class="cart-icon">
+                        <img src="assets pagina udrha/bolsa carro.svg" alt="">
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <img src="version3.jpg" alt="">
+                <a href="#categories" class="cta-button">ver ahora   ></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <h2 class="section-title">VERANO 25'</h2>
+            <div class="categories-grid">
+                <div class="category-card" id="remeras">
+                    <div class="category-image">👕</div>
+                    <div class="category-content">
+                        <h3>REMERAS</h3>
+                        <p>Remeras de alta calidad con diseños únicos y materiales premium para tu comodidad diaria.</p>
+                    </div>
+                </div>
+                <div class="category-card" id="camperas">
+                    <div class="category-image">🧥</div>
+                    <div class="category-content">
+                        <h3>CAMPERAS</h3>
+                        <p>Camperas modernas que combinan estilo y funcionalidad para cualquier ocasión y temporada.</p>
+                    </div>
+                </div>
+                <div class="category-card" id="pantalones">
+                    <div class="category-image">👖</div>
+                    <div class="category-content">
+                        <h3>PANTALONES</h3>
+                        <p>Pantalones cómodos y elegantes que se adaptan a tu estilo de vida urbano y dinámico.</p>
+                    </div>
+                </div>
+                <div class="category-card" id="accesorios">
+                    <div class="category-image">🎒</div>
+                    <div class="category-content">
+                        <h3>ACCESORIOS</h3>
+                        <p>Complementa tu look con nuestros accesorios exclusivos y detalles que marcan la diferencia.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BUDRIA</h3>
+                    <p>Tu tienda de moda urbana de confianza. Calidad, estilo y las últimas tendencias.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Categorías</h3>
+                    <ul>
+                        <li><a href="#remeras">Remeras</a></li>
+                        <li><a href="#camperas">Camperas</a></li>
+                        <li><a href="#pantalones">Pantalones</a></li>
+                        <li><a href="#accesorios">Accesorios</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Atención al Cliente</h3>
+                    <ul>
+                        <li><a href="#">Contacto</a></li>
+                        <li><a href="#">Envíos</a></li>
+                        <li><a href="#">Devoluciones</a></li>
+                        <li><a href="#">Tallas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 BUDRIA. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add interactive hover effects to category cards
+        document.querySelectorAll('.category-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Search functionality
+        document.querySelector('.search-box').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                const searchTerm = this.value.toLowerCase();
+                alert(`Buscando: ${searchTerm}`);
+                // Here you would implement actual search functionality
+            }
+        });
+
+        // Shopping cart interaction
+        document.querySelector('.cart-icon').addEventListener('click', function() {
+            alert('Carrito de compras - Funcionalidad por implementar');
+        });
+    </script>
+</body>
+</html>
